@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    height: 150px;
+    width: 150px;
+
+    
+}
+h1{
+    text-align: center;
+    
+}
+
+
+#grey{
+    background-color:black;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    
+}
+#pink{
+    background-color:pink;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    
+}
+#yellow{
+    background-color:yellow;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+#blue{
+    background-color: blue;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+.canvas{
+    /* flex-wrap: wrap;*/
+    width: 350px; 
+} 
+    </style>
+    
+</head>
+<body>
+    <div class="canvas">
+    <h1>Color Change</h1>
+    
+    <span class="button" id="grey"></span>
+    <span class="button" id="pink"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+</div>
+
+    <script>
+        console.log("hitesh")
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    const a=e.target.id;
+    if (e.target.id === 'grey') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'pink') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      body.style.backgroundColor = e.target.id;
+    }
+  // switch(a){
+  //   case a ==='grey':
+  //     body.style.backgroundColor=a
+  //     break
+  //   case a==='pink':
+  //     body.style.backgroundColor=a
+  //     break
+  //   case a==='blue':
+  //       body.style.backgroundColor=a
+  //       break
+  //   case a==='yellow':
+  //         body.style.backgroundColor=a
+  //         break    
+  // }  
+  });
+});
+    </script>
+    
+</body>
+</html>
